@@ -23,7 +23,7 @@ function InfoCard() {
                     title="BUNDLE SIZE"
                     value={3.5}
                     precision={2}
-                    valueStyle={{ color: "#cf1322" }}
+                    valueStyle={{ color: "rgba(0,0,0,.85)" }}
                     prefix={<ArrowDownOutlined />}
                     suffix="kb"
                   />
@@ -35,7 +35,7 @@ function InfoCard() {
                     title="BUNDLE MINIFIED"
                     value={1.4}
                     precision={2}
-                    valueStyle={{ color: "#3f8600" }}
+                    valueStyle={{ color: "rgba(0,0,0,.85)" }}
                     prefix={<ArrowUpOutlined />}
                     suffix="kb"
                   />
