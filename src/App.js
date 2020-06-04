@@ -7,6 +7,7 @@ import {
   ArrowDownOutlined,
   CheckOutlined,
   CloseOutlined,
+  MailOutlined,
 } from "@ant-design/icons";
 import {
   Input,
@@ -84,16 +85,17 @@ function App() {
             md={{ span: 8, offset: 8 }}
             lg={{ span: 6, offset: 9 }}
           >
-            <Title style={{ marginBottom: "10px" }} level={4}>
-              Enter an email
+            <Title style={{ marginBottom: "10px" }} level={2}>
+              EmailCheck <MailOutlined />
             </Title>
+            <span style={{ marginBottom: "10px" }}>Enter an email</span>
             <Form>
               <Input
                 autoComplete
                 allowClear
                 onPressEnter={onSubmit}
                 disabled={checking}
-                placeholder="Enter email"
+                placeholder="Enter an email to check"
                 onChange={(val) => {
                   if (error !== "") {
                     setError("");
@@ -136,7 +138,7 @@ function App() {
                 type={email.length > 0 ? "primary" : "default"}
                 icon={<SearchOutlined />}
               >
-                Check
+                Check email
               </Button>
             </Form>
           </Col>
