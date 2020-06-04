@@ -65,9 +65,8 @@ function App() {
         setError("No suggestion for this email");
         setChecking(false);
         setInfo("What does this mean?");
-        var x = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        var y = x.test(email);
-        setValidEmail(y);
+        var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        setValidEmail(regex.test(email));
       },
     });
   }
@@ -90,6 +89,7 @@ function App() {
             </Title>
             <Form>
               <Input
+                autoComplete
                 allowClear
                 onPressEnter={onSubmit}
                 disabled={checking}
@@ -123,7 +123,7 @@ function App() {
                 <>
                   <br />
                   <span>
-                    Your email looks{" "}
+                    Your email looks
                     {emailLooksValid ? <CheckOutlined /> : <CloseOutlined />}
                   </span>
                 </>

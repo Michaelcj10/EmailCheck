@@ -2,7 +2,7 @@ import React from "react";
 import "antd/dist/antd.css";
 import "./App.css";
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
-import { Row, Col, Typography, Statistic, Card } from "antd";
+import { Row, Col, Typography, Statistic, Card, Button } from "antd";
 const { Title } = Typography;
 
 function InfoCard() {
@@ -44,6 +44,13 @@ function InfoCard() {
             </Row>
           </div>
         </div>
+        <Button
+          href="https://github.com/mailcheck/mailcheck"
+          style={{ paddingLeft: "0px" }}
+          type="link"
+        >
+          Mailcheck GitHub
+        </Button>
       </Col>
     </Row>
   );
