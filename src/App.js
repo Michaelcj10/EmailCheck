@@ -133,7 +133,7 @@ function App() {
                 disabled={checking}
                 onClick={onSubmit}
                 style={{ marginTop: "25px", width: "100%" }}
-                type="primary"
+                type={email.length > 0 ? "primary" : "default"}
                 icon={<SearchOutlined />}
               >
                 Check
